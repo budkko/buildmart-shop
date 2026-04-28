@@ -61,7 +61,7 @@ function ItemDetailsPage() {
             <img
               src={selectedItem.images[activeImage]}
               alt={selectedItem.name}
-              className="w-full h-96 object-cover transition-all duration-500"
+              className="w-full aspect-square object-cover transition-all duration-500"
             />
             <button
               onClick={showPreviousImage}
@@ -82,7 +82,7 @@ function ItemDetailsPage() {
               <button
                 key={index}
                 onClick={() => setActiveImage(index)}
-                className={`w-28 h-24 rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer
+                className={`flex-1 aspect-square rounded-lg overflow-hidden border-2 transition-all duration-200 cursor-pointer
                   ${activeImage === index ? 'border-orange-500' : 'border-gray-200 hover:border-gray-400'}`}
               >
                 <img src={img} alt="" className="w-full h-full object-cover" />
@@ -165,7 +165,7 @@ function ItemDetailsPage() {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 mb-8">
             <button
               onClick={handleAddToBasket}
               className={`w-full py-4 rounded-lg font-semibold text-lg flex items-center justify-center gap-2 active:scale-95 transition-all cursor-pointer
@@ -184,11 +184,8 @@ function ItemDetailsPage() {
             </button>
           </div>
 
-        </div>
-      </div>
-
-      {/* Description + Technical Specifications accordion */}
-      <div className="border border-gray-200 rounded-xl overflow-hidden max-w-4xl mb-12">
+          {/* Description + Technical Specifications accordion */}
+          <div className="border border-gray-200 rounded-xl overflow-hidden">
         {/* Description always visible */}
         <div className="px-6 py-5">
           <p className="text-gray-600 leading-relaxed text-base">{selectedItem.description}</p>
@@ -229,6 +226,9 @@ function ItemDetailsPage() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
         </div>
       </div>
 

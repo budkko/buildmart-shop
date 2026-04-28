@@ -6,7 +6,7 @@ function Navigation() {
 
     return (
         <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-6">
+            <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-6">
 
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-2 flex-shrink-0">
@@ -17,7 +17,7 @@ function Navigation() {
                 </Link>
 
                 {/* Nav */}
-                <nav className="hidden md:flex items-center gap-6">
+                <nav className="hidden md:flex items-center gap-8">
                     <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">Products</Link>
                     <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">Categories</Link>
                     <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium">Deals</Link>

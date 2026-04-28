@@ -44,7 +44,7 @@ function ItemCard({ item, onItemAdded }) {
                 <img
                     src={item.images[0]}
                     alt={item.name}
-                    className="w-full h-72 object-cover"
+                    className="w-full aspect-square object-cover"
                 />
             </Link>
 
